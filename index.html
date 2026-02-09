@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>For You 🧸</title>
+
+  <style>
+    body {
+      text-align: center;
+      font-family: Arial, sans-serif;
+      background: #fff0f5;
+      padding: 40px;
+    }
+
+    button {
+      padding: 12px 20px;
+      margin: 10px;
+      border: none;
+      border-radius: 20px;
+      background: #ff69b4;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #ff1493;
+    }
+
+    /* Animations */
+
+    @keyframes floatIn {
+      0% {
+        opacity: 0;
+        transform: translateY(50px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes heartbeat {
+      0% { transform: scale(1); }
+      25% { transform: scale(1.2); }
+      50% { transform: scale(1); }
+      75% { transform: scale(1.2); }
+      100% { transform: scale(1); }
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <h2 id="text">Ready for a small surprise, Cutie? 😌🧸</h2>
+
+  <div id="buttons">
+    <button onclick="next1()">Yes 😄</button>
+    <button onclick="next1()">Of course 🩷</button>
+  </div>
+
+  <script>
+
+    function next1() {
+      document.getElementById("text").innerText =
+        "Btw, who is your favorite person? 😏";
+
+      document.getElementById("buttons").innerHTML =
+        '<button onclick="next2()">Cutu 😎</button>' +
+        '<button onclick="next2()">Obviously Cutu 😼🎀</button>';
+    }
+
+    function next2() {
+      document.getElementById("text").innerText =
+        "Do you like teddy hugs? 🤭🧸";
+
+      document.getElementById("buttons").innerHTML =
+        '<button onclick="final()">Yes 🩷</button>' +
+        '<button onclick="final()">I need them 😅</button>';
+    }
+
+    function final() {
+      document.getElementById("text").innerHTML = `
+
+      <div style="
+        font-size:90px;
+        animation: floatIn 1.2s ease-out;
+      ">
+        🧸
+      </div>
+
+      <h2 style="
+        animation: fadeIn 2s;
+        margin-top:15px;
+      ">
+        Happy Teddy Day, Vansh🎀❤️‍🔥🌹
+      </h2>
+
+      <p style="
+        font-size:18px;
+        animation: fadeIn 3s;
+      ">
+        This teddy is from me… <br>
+        to remind you that <br>
+        you are special to me 💗
+      </p>
+
+      <div style="
+        font-size:40px;
+        margin-top:15px;
+        animation: heartbeat 1s infinite;
+      ">
+        💖
+      </div>
+
+      <p style="
+        margin-top:20px;
+        font-style:italic;
+        animation: fadeIn 4s;
+      "><font face="MONOTYPE CORSIVA">
+        — From your favorite person 😼😽
+     </font></p>
+
+      `;
+
+      document.getElementById("buttons").innerHTML = "";
+    }
+
+  </script>
+
+</body>
+</html>

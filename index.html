@@ -5,10 +5,20 @@
 
   <style>
     body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       text-align: center;
       font-family: Arial, sans-serif;
-      background: #fff0f5;
+      background: linear-gradient(to bottom right, #fff0f5, #ffe6ee);
       padding: 40px;
+    }
+
+    .container {
+      max-width: 500px;
+      width: 100%;
     }
 
     button {
@@ -57,11 +67,15 @@
 
 <body>
 
-  <h2 id="text">Ready for a small surprise, Cutie? 😌🧸</h2>
+  <div class="container">
 
-  <div id="buttons">
-    <button onclick="next1()">Yes 😄</button>
-    <button onclick="next1()">Of course 🩷</button>
+    <h2 id="text">Ready for a small surprise, Cutie? 😌🧸</h2>
+
+    <div id="buttons">
+      <button onclick="next1()">Yes 😄</button>
+      <button onclick="next1()">Of course 🩷</button>
+    </div>
+
   </div>
 
   <script>
